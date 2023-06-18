@@ -2,8 +2,6 @@ module main
 
 import stbimage
 
-// This program resizes the `v-logo.png` file to 250x250 pixels and outputs it to `out.png`.
-
 [manualfree]
 fn main() {
 	input_file_name := 'v-logo.png'
@@ -22,7 +20,6 @@ fn main() {
 		stbimage.stbi_image_free(input_image)
 	}
 	if input_image <= 0 {
-		// get any errors with `stbimage.get_error()`
 		println('Failed to load input image: ${stbimage.get_error()}.')
 		return
 	}

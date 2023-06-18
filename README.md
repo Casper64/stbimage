@@ -36,7 +36,7 @@ if input_image <= 0 {
 }
 ```
 
-For an example run the [resize](examples/resize.v) example.
+For a example run the [resize](examples/resize.v) example `v run resize.v`.
 
 **resize.v**
 ```v
