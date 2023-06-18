@@ -70,7 +70,7 @@ fn main() {
 
 	// Allocate memory for the resized image
 	mut output_image := unsafe { malloc(new_width * new_height * channels) }
-	if (output_image <= 0) {
+	if output_image <= 0 {
 		eprintln('Failed to allocate memory for the output image.')
 		return
 	}
