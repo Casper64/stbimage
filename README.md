@@ -64,13 +64,16 @@ fn main() {
 		stbimage.stbi_image_free(input_image)
 	}
 	if input_image <= 0 {
-		// get any errors with `stbimage.get_error()`
 		println('Failed to load input image: ${stbimage.get_error()}.')
 		return
 	}
 
 	// Allocate memory for the resized image
 	mut output_image := unsafe { malloc(new_width * new_height * channels) }
+	if (output_image <= 0) {
+		eprintln('Failed to allocate memory for the output image.')
+		return
+	}
 	defer {
 		// free the allocated data
 		unsafe { free(output_image) }
@@ -90,4 +93,5 @@ fn main() {
 
 	println('Image resized and saved successfully.')
 }
+
 ```

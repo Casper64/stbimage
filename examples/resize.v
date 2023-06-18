@@ -2,6 +2,8 @@ module main
 
 import stbimage
 
+// This program resizes the `v-logo.png` file to 250x250 pixels and outputs it to `out.png`.
+
 [manualfree]
 fn main() {
 	input_file_name := 'v-logo.png'
@@ -26,6 +28,10 @@ fn main() {
 
 	// Allocate memory for the resized image
 	mut output_image := unsafe { malloc(new_width * new_height * channels) }
+	if (output_image <= 0) {
+		eprintln('Failed to allocate memory for the output image.')
+		return
+	}
 	defer {
 		// free the allocated data
 		unsafe { free(output_image) }
