@@ -1,6 +1,6 @@
 module main
 
-import stbimage
+import casper64.stbimage
 
 // This program resizes the `v-logo.png` file to 250x250 pixels and outputs it to `out.png`.
 

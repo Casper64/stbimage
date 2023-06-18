@@ -14,9 +14,15 @@ stb_image_resize.h | 0.97 | resize images larger/smaller with good quality
 
 Check out [nothings/stb](https://github.com/nothings/stb) for documentation.
 
+## Installation
+
+```
+v install Casper64.stbimage
+```
+
 ## Usage
 
-The library is cross platform so you only need to import it: `import stbimage`.
+The library is cross platform so you only need to import it: `import casper64.stbimage`.
 
 ### Errors
 Some functions return `int` as result. If the return value is `<= 0` an error has occured.
@@ -42,7 +48,7 @@ For example run the [resize](examples/resize.v) example `v run resize.v`.
 ```v
 module main
 
-import stbimage
+import casper64.stbimage
 
 // This program resizes the `v-logo.png` file to 250x250 pixels and outputs it to `out.png`.
 
